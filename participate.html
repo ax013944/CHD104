@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>學生報名</title>
     <link rel="stylesheet" href="css/reset.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <!-- 導覽列 -->
+    <!-- 導覽列 1.0-->
     <nav class="page_nav">
         <a href="index.html" class="nav_logo flex">
             <img src="pic/sakura_logo_nav.png">
@@ -59,7 +59,7 @@
         </ul>
     </nav>
 
-    <!-- banner -->
+    <!-- banner 1.0-->
     <div class="banner">
         <img src="pic/sakura_banner.jpg" alt="">
         <span class="title">一緒に</span>
@@ -67,92 +67,83 @@
     </div>
 
     <!-- main -->
-    <div class="apply_body">
-        <div class="container">
-            <div class="row row-cols-1 apply_flex">
-                <div class="col input_title">
-                    <h3>學生報名</h3>
+    <div class="container">
+        <div class="row center_flex apply_flex">
+            <div class="col col-12 flex center_flex blue_bg_color input_title">
+                <h3 class="white_font title">學生報名</h3>
+            </div>
+            <div class="col col-12 input_main script_font_jp">
+                <div class="row center_flex column_flex input_item">
+                    <label for="id" class="col-10 col-md-8"><span>*</span>姓名</label>
+                    <input id="id" class="col-10 col-md-8" type="text" placeholder="請輸入姓名" required>
                 </div>
-                <div class="col input_main">
-                    <div class="row input_item">
-                        <label for="id" class="col-8 col-md-8 col-lg-8 col-xl-8"><span>*</span>姓名</label>
-                        <input id="id" class="col-8 col-md-8 col-lg-8 col-xl-8" type="text" placeholder="請輸入姓名"
-                            required>
-                    </div>
-                    <div class="row input_item">
-                        <label for="tel" class="col-8 col-md-8 col-lg-8 col-xl-8"><span>*</span>電話</label>
-                        <input id="tel" class="col-8 col-md-8 col-lg-8 col-xl-8" type="tel" placeholder="請輸入電話"
-                            required>
-                    </div>
-                    <div class="row input_item">
-                        <label for="email" class="col-8 col-md-8 col-lg-8 col-xl-8"><span>*</span>電子信箱</label>
-                        <input id="email" class="col-8 col-md-8 col-lg-8 col-xl-8" type="email" placeholder="請輸入電子信箱"
-                            required>
-                    </div>
-                    <div class="row input_item">
-                        <label for="goal" class="col-8 col-md-8 col-lg-8 col-xl-8">修課目的(選填)</label>
-                        <input id="goal" class="col-8 col-md-8 col-lg-8 col-xl-8" type="text" placeholder="請輸入修課目的">
-                    </div>
-                    <div class="row input_item">
-                        <label class="col-8 col-md-8 col-lg-8 col-xl-8"><span>*</span>報名班級</label>
-                        <div class="col-8 col-md-8 col-lg-8 col-xl-8 radio_flex">
-                            <div class="radio_item">
-                                <div>
-                                    <input type="radio" name="school" id="school_1" required>
-                                    <label class="radio_item_box" for="school_1">
-                                        <label for="school_1" class="check_box">
-                                            <div class="check"></div>
-                                        </label>
-                                        台北信義校
-                                    </label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="school" id="school_2" required>
-                                    <label class="radio_item_box" for="school_2">
-                                        <label for="school_2" class="check_box">
-                                            <div class="check"></div>
-                                        </label>
-                                        高雄左營校
-                                    </label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="school" id="school_3" required>
-                                    <label class="radio_item_box" for="school_3">
-                                        <label for="school_3" class="check_box">
-                                            <div class="check"></div>
-                                        </label>
-                                        暑假日本合宿短期班
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row input_item">
-                        <div class="col-8 col-md-8 col-lg-8 col-xl-8 radio_flex">
-                            <div class="radio_item">
-                                <div>
-                                    <input type="radio" name="agree" id="agree" required>
-                                    <label class="radio_item_box" for="agree">
-                                        <label for="agree" class="check_box">
-                                            <div class="check"></div>
-                                        </label>
-                                        我已了解春天日文補習班將會收到並使用上述資料
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row center_flex column_flex input_item">
+                    <label for="tel" class="col-10 col-md-8"><span>*</span>電話</label>
+                    <input id="tel" class="col-10 col-md-8" type="tel" placeholder="請輸入電話" required>
+                </div>
+                <div class="row center_flex column_flex input_item">
+                    <label for="email" class="col-10 col-md-8"><span>*</span>電子信箱</label>
+                    <input id="email" class="col-10 col-md-8" type="email" placeholder="請輸入電子信箱" required>
+                </div>
+                <div class="row center_flex column_flex input_item">
+                    <label for="goal" class="col-10 col-md-8">修課目的(選填)</label>
+                    <input id="goal" class="col-10 col-md-8" type="text" placeholder="請輸入修課目的">
+                </div>
+                <div class="row center_flex column_flex input_item">
+                    <label class="col-10 col-md-8"><span>*</span>報名班級</label>
+                    <div class="col-10 col-md-8 flex radio_item">
 
-                    <div class="row input_item">
-                        <a class="col-2 col-md-2 col-lg-2 col-xl-2 sumbit_button" href="apply_ok.html">
-                            報名
-                        </a>
+                        <div>
+                            <input type="radio" name="school" id="school_1" required>
+                            <label class="flex center_flex radio_item_box" for="school_1">
+                                <label for="school_1" class="flex center_flex check_box">
+                                    <div class="check">✓</div>
+                                </label>
+                                台北信義校
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" name="school" id="school_2" required>
+                            <label class="flex center_flex radio_item_box" for="school_2">
+                                <label for="school_2" class="flex center_flex check_box">
+                                    <div class="check">✓</div>
+                                </label>
+                                高雄左營校
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" name="school" id="school_3" required>
+                            <label class="flex center_flex radio_item_box" for="school_3">
+                                <label for="school_3" class="flex center_flex check_box">
+                                    <div class="check">✓</div>
+                                </label>
+                                暑假日本合宿短期班
+                            </label>
+                        </div>
                     </div>
+                </div>
+                <div class="row center_flex column_flex input_item">
+                    <div class="col-10 col-md-8 flex radio_item agree_check">
+                        <input type="radio" name="agree" id="agree" required>
+                        <label class="radio_item_box" for="agree">
+                            <label for="agree" class="flex center_flex check_box">
+                                <div class="check">✓</div>
+                            </label>
+                            我已了解春天日文補習班將會收到並使用上述資料
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row center_flex column_flex input_item">
+                    <a class="col-4 col-md-2 sumbit_button script_font white_font" href="apply_ok.html">
+                        報名
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- 頁尾 -->
+
+    <!-- 頁尾 1.0-->
     <footer class="page_footer">
         <div class="container">
             <div class="row footer_link_flex">

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>加入我們</title>
     <link rel="stylesheet" href="css/reset.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,13 +22,13 @@
 </head>
 
 <body>
-    <!-- 導覽列 -->
+    <!-- 導覽列 1.0-->
     <nav class="page_nav">
-        <a href="index.html" class="nav_logo">
+        <a href="index.html" class="nav_logo flex">
             <img src="pic/sakura_logo_nav.png">
         </a>
         <input type="checkbox" name="" id="nav_btn">
-        <label class="nav_btn" for="nav_btn">
+        <label class="nav_btn flex" for="nav_btn">
             <img src="pic/nav_btn.png">
         </label>
         <ul class="nav_link_list">
@@ -59,115 +59,120 @@
         </ul>
     </nav>
 
-    <!-- banner -->
+    <!-- banner 1.0-->
     <div class="banner">
         <img src="pic/sakura_banner.jpg" alt="">
         <span class="title">一緒に</span>
         <span class="title">日本語を学びましょう</span>
     </div>
 
+    <!-- 遮罩 防止提交時觸碰其他按鈕-->
+    <!-- <div id="overlay" class="overlay"></div> -->
+
+    <!-- 燈箱內容 -->
+    <!-- <div id="lightbox" class="lightbox">
+        <div class="flex column_flex center_flex">
+            <div class="blue_bg_color"></div>
+            <span class="script_font">報名完成</span>
+            <span class="script_font">請靜待1~2工作天，將有專員為您服務，</span>
+            <span class="script_font">謝謝您的填寫。</span>
+            <a href="index.html" title="回到首頁">回到首頁</a>
+        </div>
+    </div> -->
+
     <!-- main -->
-    <div class="apply_body">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-1 apply_flex">
-                <div class="col input_title">
-                    <h3>職位報名</h3>
+    <div class="container">
+        <div class="row center_flex apply_flex">
+            <div class="col col-12 flex center_flex blue_bg_color input_title">
+                <h3 class="white_font title">職位報名</h3>
+            </div>
+            <div class="col col-12 input_main script_font_jp">
+                <div class="row center_flex column_flex input_item">
+                    <label for="id" class="col-10 col-md-8"><span>*</span>姓名</label>
+                    <input id="id" class="col-10 col-md-8" type="text" placeholder="請輸入姓名" required>
                 </div>
-                <div class="col input_main">
-                    <div class="row input_item">
-                        <label for="id" class="col-8 col-md-8 col-lg-8 col-xl-8"><span>*</span>姓名</label>
-                        <input id="id" class="col-8 col-md-8 col-lg-8 col-xl-8" type="text" placeholder="請輸入姓名"
-                            required>
-                    </div>
-                    <div class="row input_item">
-                        <label for="tel" class="col-8 col-md-8 col-lg-8 col-xl-8"><span>*</span>電話</label>
-                        <input id="tel" class="col-8 col-md-8 col-lg-8 col-xl-8" type="tel" placeholder="請輸入電話"
-                            required>
-                    </div>
-                    <div class="row input_item">
-                        <label for="email" class="col-8 col-md-8 col-lg-8 col-xl-8"><span>*</span>電子信箱</label>
-                        <input id="email" class="col-8 col-md-8 col-lg-8 col-xl-8" type="email" placeholder="請輸入電子信箱"
-                            required>
-                    </div>
+                <div class="row center_flex column_flex input_item">
+                    <label for="tel" class="col-10 col-md-8"><span>*</span>電話</label>
+                    <input id="tel" class="col-10 col-md-8" type="tel" placeholder="請輸入電話" required>
+                </div>
+                <div class="row center_flex column_flex input_item">
+                    <label for="email" class="col-10 col-md-8"><span>*</span>電子信箱</label>
+                    <input id="email" class="col-10 col-md-8" type="email" placeholder="請輸入電子信箱" required>
+                </div>
 
-                    <div class="row input_item">
-                        <label class="col-8 col-md-8 col-lg-8 col-xl-8"><span>*</span>應徵職位</label>
-                        <div class="col-8 col-md-8 col-lg-8 col-xl-8 radio_flex">
-                            <div class="radio_item">
-                                <div>
-                                    <input type="radio" name="job_title" id="job_title_1" required>
-                                    <label class="radio_item_box" for="job_title_1">
-                                        <label for="job_title_1" class="check_box">
-                                            <div class="check"></div>
-                                        </label>
-                                        日文教師
+                <div class="row center_flex column_flex input_item">
+                    <label class="col-10 col-md-8"><span>*</span>應徵職位</label>
+                    <div class="col-10 col-md-8 flex">
+                        <div class="flex radio_item">
+                            <div>
+                                <input type="radio" name="job_title" id="job_title_1" required>
+                                <label class="flex center_flex radio_item_box" for="job_title_1">
+                                    <label for="job_title_1" class="flex center_flex check_box">
+                                        <div class="check">✓</div>
                                     </label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="job_title" id="job_title_2" required>
-                                    <label class="radio_item_box" for="job_title_2">
-                                        <label for="job_title_2" class="check_box">
-                                            <div class="check"></div>
-                                        </label>
-                                        分校導師
+                                    日文教師
+                                </label>
+                            </div>
+                            <div>
+                                <input type="radio" name="job_title" id="job_title_2" required>
+                                <label class="flex center_flex radio_item_box" for="job_title_2">
+                                    <label for="job_title_2" class="flex center_flex check_box">
+                                        <div class="check">✓</div>
                                     </label>
-                                </div>
+                                    分校導師
+                                </label>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="row input_item">
-                        <label for="tel" class="col-8 col-md-8 col-lg-8 col-xl-8"><span>*</span>自傳(上傳格式僅接受PPT檔案)</label>
-                        <div class="col-8 col-md-8 col-lg-8 col-xl-8">
-                            <div class="row file_flex">
-                                <input id="file" class="file_check" type="file" id="file" required>
-                                <label class="col-2 col-md-2 col-lg-2 col-xl-2 file_box" for="file">選擇檔案</label>
-                                <!-- <span id="file_name">選擇檔名</span> -->
-                            </div>
+                <div class="row center_flex column_flex input_item">
+                    <label for="tel" class="col-10 col-md-8"><span>*</span>自傳(上傳格式僅接受PPT檔案)</label>
+                    <div class="col-10 col-md-8">
+                        <div class="row file_flex">
+                            <input id="file" class="file_check" type="file" id="file" required>
+                            <label class="col-4 col-md-2 script_font white_font flex center_flex file_box" for="file">選擇檔案</label>
+                            <!-- <span id="file_name">選擇檔名</span> -->
                         </div>
                     </div>
+                </div>
 
-                    <div class="row input_item">
-                        <div class="col-8 col-md-8 col-lg-8 col-xl-8 radio_flex">
-                            <div class="radio_item">
-                                <div>
-                                    <input type="radio" name="agree" id="agree" required>
-                                    <label class="radio_item_box" for="agree">
-                                        <label for="agree" class="check_box">
-                                            <div class="check"></div>
-                                        </label>
-                                        我已了解春天日文補習班將會收到並使用上述資料
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+                <div class="row center_flex column_flex input_item">
+                    <div class="col-10 col-md-8 radio_item flex agree_check">
+                        <input type="radio" name="agree" id="agree" required>
+                        <label class=" radio_item_box" for="agree">
+                            <label for="agree" class="flex center_flex check_box">
+                                <div class="check">✓</div>
+                            </label>
+                            我已了解春天日文補習班將會收到並使用上述資料
+                        </label>
                     </div>
+                </div>
 
-                    <div class="row input_item">
-                        <a class="col-2 col-md-2 col-lg-2 col-xl-2 sumbit_button" href="apply_ok.html">
-                            報名
-                        </a>
-                    </div>
+                <div class="row center_flex column_flex input_item">
+                    <a class="col-4 col-md-2 sumbit_button script_font white_font" href="apply_ok.html">
+                        報名
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 頁尾 -->
+    <!-- 頁尾 1.0-->
     <footer class="page_footer">
         <div class="container">
             <div class="row footer_link_flex">
                 <a href="#" class="col col-4 col-lg-3 col-xl-2 footer_item">
                     <img src="pic/corp_school_logo.png">
-                    <h3 class="flex center_flex">長野縣高等學校</h3>
+                    <h3 class="flex center_flex script_font_jp">長野縣高等學校</h3>
                 </a>
                 <a href="index.html" class="col col-4 col-lg-3 col-xl-2 footer_item">
                     <img src="pic/sakura_logo.png">
-                    <h3 class="flex center_flex">春天日語補習班</h3>
+                    <h3 class="flex center_flex script_font_jp">春天日語補習班</h3>
                 </a>
                 <a href="https://www.jlpt.jp/index.html" class="col col-4 col-lg-3 col-xl-2 footer_item">
                     <img src="pic/jlpt_logo.png">
-                    <h3 class="flex center_flex title">JLPT日文檢定</h3>
+                    <h3 class="flex center_flex script_font_jp">JLPT日文檢定</h3>
                 </a>
             </div>
         </div>

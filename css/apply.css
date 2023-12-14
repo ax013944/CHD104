@@ -1,93 +1,99 @@
-.input_title {
-    box-sizing: border-box;
-    margin-top: 40px;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-    background-color: #10253F;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 78px;
+.container>.apply_flex {
+    border: 1px solid #000;
+    overflow: hidden;
+
+    margin: 20px auto 40px;
+    border-radius: 20px;
+    max-width: 83.333333%;
+
+    @media (min-width: 768px) {
+        margin: 40px auto 70px;
+        border-radius: 30px;
+        max-width: 100%;
+    }
 }
 
-.input_title h3 {
-    margin: 15px 0;
-    line-height: 1.5;
-    font-size: 32px;
-    letter-spacing: 3.6px;
-    font-family: 'Noto Serif JP', serif;
-    color: #fff;
-    font-weight: 500;
-}
+.input_title h3,
+.input_item label {
+    margin: 10px 0;
 
-.input_item {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+    @media (min-width: 768px) {
+        margin: 15px 0;
+    }
 }
 
 .input_main {
-    border: 1px solid #000;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    margin-bottom: 70px;
-    min-height: 900px;
+    border-top: 1px solid #000;
+    min-height: 650px;
+    @media (min-width: 768px) {
+        min-height: 900px;
+    }
 }
 
-.input_item label {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 18px;
-    letter-spacing: 0.2ex;
-    line-height: 1.5;
-    margin: 15px 0;
+.input_item {
+    margin-top: 5px;
+
+    @media (min-width: 768px) {
+        margin-top: 10px;
+    }
 }
 
-.input_item label span {
+.input_item:nth-child(6) {
+    margin-top: 20px;
+
+    @media (min-width: 768px) {
+        margin-top: 40px;
+    }
+}
+
+.input_item>label>span {
     color: #f00;
 }
 
 .input_item input {
     background-color: #D9D9D9;
-    min-height: 50px;
     border: 0;
+
+    min-height: 40px;
+
+    @media (min-width: 768px) {
+        min-height: 50px;
+    }
 }
 
 .input_item input::placeholder {
-    font-size: 16px;
-}
+    font-size: 14px;
 
-.radio_flex {
-    display: flex;
-    flex-wrap: wrap;
+    @media (min-width: 768px) {
+        font-size: 16px;
+    }
 }
 
 .radio_item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    gap: 50px;
+    gap: 20px;
+
+    @media (min-width: 768px) {
+        gap: 40px;
+    }
 }
 
 .check_box {
     box-sizing: border-box;
-    width: 30px;
-    height: 30px;
     border: 1px solid #000;
     cursor: pointer;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+
+    width: 20px;
+    height: 20px;
+
+    @media (min-width: 768px) {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .check {
     display: none;
-    width: 20px;
-    height: 20px;
+    text-align: center;
 }
 
 .radio_item input {
@@ -96,48 +102,18 @@
 
 .radio_item input[type="radio"]:checked~.radio_item_box .check {
     display: block;
-    background-color: #FF829F;
 }
 
-.radio_flex .radio_item .radio_item_box {
-    display: flex;
-    flex-wrap: wrap;
+.radio_item .radio_item_box {
     cursor: pointer;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
     margin: 0;
 }
 
-.sumbit_button {
-    font-family: 'Inter', sans-serif;
-    text-decoration: none;
-    font-size: 18px;
-    background-color: #FF829F;
-    color: #fff;
-    margin-top: 40px;
-    margin-bottom: 100px;
-    /* width: 200px; */
-    height: 60px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.ok_text {
-    margin-top: 140px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 18px;
-    letter-spacing: 1ex;
-    line-height: 1.5;
-}
-
-.ok_text span+span {
-    padding: 10px;
+.agree_check>.radio_item_box>.check_box {
+    margin: 0 5px 0 0;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .file_flex .file_check {
@@ -145,18 +121,31 @@
 }
 
 .file_flex .file_box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
     background-color: #FF829F;
-    color: #fff;
-    height: 50px;
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    letter-spacing: 0.2ex;
-    line-height: 1.5;
-    border-radius: 5px;
     cursor: pointer;
+    margin: 0;
+    border-radius: 5px;
+
+    height: 40px;
+
+    @media (min-width: 768px) {
+        height: 50px;
+    }
+}
+
+.sumbit_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #FF829F;
+    border-radius: 5px;
+
+    margin-top: 20px;
+    height: 40px;
+
+    @media (min-width: 768px) {
+        margin-top: 40px;
+        height: 50px;
+    }
 }
