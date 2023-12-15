@@ -67,10 +67,10 @@
     </div>
 
     <!-- 遮罩 防止提交時觸碰其他按鈕-->
-    <!-- <div id="overlay" class="overlay"></div> -->
+    <div id="overlay" class="overlay"></div>
 
     <!-- 燈箱內容 -->
-    <!-- <div id="lightbox" class="lightbox">
+    <div id="lightbox" class="lightbox">
         <div class="flex column_flex center_flex">
             <div class="blue_bg_color"></div>
             <span class="script_font">報名完成</span>
@@ -78,7 +78,7 @@
             <span class="script_font">謝謝您的填寫。</span>
             <a href="index.html" title="回到首頁">回到首頁</a>
         </div>
-    </div> -->
+    </div>
 
     <!-- main -->
     <div class="container">
@@ -86,22 +86,26 @@
             <div class="col col-12 flex center_flex blue_bg_color input_title">
                 <h3 class="white_font title">職位報名</h3>
             </div>
-            <div class="col col-12 input_main script_font_jp">
+            <form class="col col-12 input_main script_font_jp" id="myform" action="join_us.html" method="post">
                 <div class="row center_flex column_flex input_item">
                     <label for="id" class="col-10 col-md-8"><span>*</span>姓名</label>
+                    <label id="hit_1"></label>
                     <input id="id" class="col-10 col-md-8" type="text" placeholder="請輸入姓名" required>
                 </div>
                 <div class="row center_flex column_flex input_item">
-                    <label for="tel" class="col-10 col-md-8"><span>*</span>電話</label>
-                    <input id="tel" class="col-10 col-md-8" type="tel" placeholder="請輸入電話" required>
+                    <label for="tel" class="col-10 col-md-8"><span>*</span>行動電話</label>
+                    <label id="hit_2"></label>
+                    <input id="tel" class="col-10 col-md-8" type="tel" placeholder="請輸入行動電話" required>
                 </div>
                 <div class="row center_flex column_flex input_item">
                     <label for="email" class="col-10 col-md-8"><span>*</span>電子信箱</label>
+                    <label id="hit_3"></label>
                     <input id="email" class="col-10 col-md-8" type="email" placeholder="請輸入電子信箱" required>
                 </div>
 
                 <div class="row center_flex column_flex input_item">
                     <label class="col-10 col-md-8"><span>*</span>應徵職位</label>
+                    <label id="hit_6"></label>
                     <div class="col-10 col-md-8 flex">
                         <div class="flex radio_item">
                             <div>
@@ -126,13 +130,15 @@
                     </div>
                 </div>
 
-                <div class="row center_flex column_flex input_item">
+                <div class="row center_flex column_flex input_item file_hit">
                     <label for="tel" class="col-10 col-md-8"><span>*</span>自傳(上傳格式僅接受PPT檔案)</label>
+                    <label id="hit_7"></label>
                     <div class="col-10 col-md-8">
                         <div class="row file_flex">
                             <input id="file" class="file_check" type="file" id="file" required>
-                            <label class="col-4 col-md-2 script_font white_font flex center_flex file_box" for="file">選擇檔案</label>
-                            <!-- <span id="file_name">選擇檔名</span> -->
+                            <label class="col-4 col-md-2 script_font white_font flex center_flex file_box"
+                                for="file">選擇檔案</label>
+                            <span col-4 col-md-2 id="file_name">選擇檔名</span>
                         </div>
                     </div>
                 </div>
@@ -140,7 +146,7 @@
                 <div class="row center_flex column_flex input_item">
                     <div class="col-10 col-md-8 radio_item flex agree_check">
                         <input type="radio" name="agree" id="agree" required>
-                        <label class=" radio_item_box" for="agree">
+                        <label class="radio_item_box" for="agree">
                             <label for="agree" class="flex center_flex check_box">
                                 <div class="check">✓</div>
                             </label>
@@ -148,13 +154,15 @@
                         </label>
                     </div>
                 </div>
-
-                <div class="row center_flex column_flex input_item">
-                    <a class="col-4 col-md-2 sumbit_button script_font white_font" href="apply_ok.html">
-                        報名
-                    </a>
+                <div class="row center_flex input_item">
+                    <label class="col-10 col-md-8" id="hit_5"></label>
                 </div>
-            </div>
+                <div class="row center_flex column_flex input_item">
+                    <button class="col-4 col-md-2 sumbit_button script_font white_font" id="submit_btn_1" type="submit">
+                        報名
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -186,6 +194,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/apply.js"></script>
 </body>
 
 </html>

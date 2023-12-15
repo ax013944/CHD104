@@ -24,7 +24,8 @@
 
 .input_main {
     border-top: 1px solid #000;
-    min-height: 650px;
+    min-height: 700px;
+
     @media (min-width: 768px) {
         min-height: 900px;
     }
@@ -32,6 +33,7 @@
 
 .input_item {
     margin-top: 5px;
+    position: relative;
 
     @media (min-width: 768px) {
         margin-top: 10px;
@@ -137,15 +139,78 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
+    border: transparent;
+    cursor: pointer;
     background-color: #FF829F;
     border-radius: 5px;
 
-    margin-top: 20px;
+    margin-top: 40px;
     height: 40px;
 
     @media (min-width: 768px) {
-        margin-top: 40px;
+        margin-top: 60px;
         height: 50px;
     }
+}
+
+.sumbit_button:hover {
+    background-color: #10253F;
+    transition: 1s;
+}
+
+[id*="hit_"] {
+    position: absolute;
+    top: 0;
+    right: 8.333333%;
+    color: #f00;
+    font-size: 14px;
+
+    @media (min-width: 768px) {
+        right: 16.666666%;
+    }
+}
+
+.file_hit label:nth-child(1) {
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+        margin-bottom: 15px;
+    }
+}
+
+.file_hit label:nth-child(2) {
+    top: 30px;
+    left: 12%;
+
+    @media (min-width: 768px) {
+        top: 0;
+        left: auto;
+        right: 16.666666%;
+    }
+}
+
+/* 遮罩樣式 */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* 半透明黑色 */
+    z-index: 50;
+}
+
+/* 燈箱樣式 */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #fff;
+    z-index: 100;
+    /* 比遮罩高的層級 */
 }
