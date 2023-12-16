@@ -8,7 +8,7 @@ function $id(id) {
 // 顯示遮罩和燈箱
 function openLightbox() {
     $id('overlay').style.display = 'block';
-    $id('lightbox').style.display = 'block';
+    $id('lightbox').style.display = 'flex';
 }
 
 //最低長度檢查

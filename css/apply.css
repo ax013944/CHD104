@@ -202,9 +202,11 @@
     z-index: 50;
 }
 
+#lightbox{
+    display: none;
+}
 /* 燈箱樣式 */
 .row .lightbox {
-    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
