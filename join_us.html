@@ -70,13 +70,15 @@
     <div id="overlay" class="overlay"></div>
 
     <!-- 燈箱內容 -->
-    <div id="lightbox" class="lightbox">
-        <div class="flex column_flex center_flex">
-            <div class="blue_bg_color"></div>
-            <span class="script_font">報名完成</span>
-            <span class="script_font">請靜待1~2工作天，將有專員為您服務，</span>
-            <span class="script_font">謝謝您的填寫。</span>
-            <a href="index.html" title="回到首頁">回到首頁</a>
+    <div class="container">
+        <div class="row">
+            <div id="lightbox" class="col col-8 col-md-3 flex column_flex center_flex script_font lightbox">
+                <div class="blue_bg_color"></div>
+                <span>報名完成</span>
+                <span>請靜待1~2工作天，將有專員為您服務，</span>
+                <span>謝謝您的填寫。</span>
+                <a href="index.html" title="回到首頁" class="btn_style">回到首頁</a>
+            </div>
         </div>
     </div>
 
@@ -138,7 +140,7 @@
                             <input id="file" class="file_check" type="file" id="file" required>
                             <label class="col-4 col-md-2 script_font white_font flex center_flex file_box"
                                 for="file">選擇檔案</label>
-                            <span col-4 col-md-2 id="file_name">選擇檔名</span>
+                            <span class="col col-7 col-md-9 flex" id="file_name">選擇檔名</span>
                         </div>
                     </div>
                 </div>

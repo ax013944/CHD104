@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>關於我們</title>
     <link rel="stylesheet" href="css/reset.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,13 +22,13 @@
 </head>
 
 <body>
-    <!-- 導覽列 -->
+    <!-- 導覽列 1.0-->
     <nav class="page_nav">
-        <a href="index.html" class="nav_logo">
+        <a href="index.html" class="nav_logo flex">
             <img src="pic/sakura_logo_nav.png">
         </a>
         <input type="checkbox" name="" id="nav_btn">
-        <label class="nav_btn" for="nav_btn">
+        <label class="nav_btn flex" for="nav_btn">
             <img src="pic/nav_btn.png">
         </label>
         <ul class="nav_link_list">
@@ -59,7 +59,7 @@
         </ul>
     </nav>
 
-    <!-- banner -->
+    <!-- banner 1.0-->
     <div class="banner">
         <img src="pic/sakura_banner.jpg" alt="">
         <span class="title">一緒に</span>
@@ -69,131 +69,142 @@
 
     <div class="container">
         <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-1">
-            <div class="col introd_item">
-                <div class="introd_title">
+            <div class="col item_top flex center_flex">
+                <div class="title flex center_flex">
                     上課地點
                 </div>
-                <div class="col classroom_card_flex">
-                    <img class="class_card_bg" src="pic/classroom_bg_1.png">
-                    <div class="row classroom_card">
-                        <div class="col-2 col-md-2 col-lg-2 col-xl-2 class_img">
+
+                <div class="col col-10 col-md-12 item_card item_top">
+                    <div class="row item_top item_card_flex">
+                        <div class="col col-5 col-md-2  flex center_flex card_img">
                             <img src="pic/class_1.png">
                         </div>
-                        <div class="col-5 col-md-5 col-lg-5 col-xl-5 class_text">
-                            <div class="class_title">台北校</div>
-                            <span>坐落於信義區的台北分校，</span>
-                            <span>擁有寬敞的教室，提供學生舒適的學習環境，</span>
-                            <span>除了配備投影機和音響系統，</span>
-                            <span>校內還有休息區提供放鬆的地方，</span>
-                            <span>讓您在愉快的學習環境中成長。</span>
+                        <div class="col col-10 col-md-5">
+                            <div class="flex">
+                                <h3 class="title">台北校</h3>
+                            </div>
+                            <div class="flex column_flex script_font item_top_mini">
+                                <span class="item_top_mini">坐落於信義區的台北分校，</span>
+                                <span class="item_top_mini">擁有寬敞的教室，提供學生舒適的學習環境，</span>
+                                <span class="item_top_mini">除了配備投影機和音響系統，</span>
+                                <span class="item_top_mini">而在這裡交到的朋友也讓學習更有趣。</span>
+                                <span class="item_top_mini">校內還有休息區提供放鬆的地方，</span>
+                                <span class="item_top_mini">讓您在愉快的學習環境中成長。</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col classroom_card_flex">
-                    <img class="class_card_bg" src="pic/classroom_bg_2.png">
-                    <div class="row classroom_card">
-                        <div class="col-5 col-md-5 col-lg-5 col-xl-5 class_text">
-                            <div class="class_title">高雄校</div>
-                            <span>坐落於左營區的高雄分校，</span>
-                            <span>設有學習資源中心，提供豐富的學習材料和參考書籍，</span>
-                            <span>以滿足學生的學術需求。</span>
-                            <span>另外還有自習室可以自主學習和複習，</span>
-                            <span>讓您享受寧靜的學習環境。</span>
+
+                <div class="col col-10 col-md-12 item_card item_top_mini">
+                    <div class="row item_top item_card_flex">
+                        <div class="col  col-10 col-md-5">
+                            <div class="flex">
+                                <h3 class="title">高雄校</h3>
+                            </div>
+                            <div class="flex column_flex script_font item_top_mini">
+                                <span class="item_top_mini">坐落於左營區的高雄分校，</span>
+                                <span class="item_top_mini">設有學習資源中心，提供豐富的學習材料和參考書籍，</span>
+                                <span class="item_top_mini">以滿足學生的學術需求。</span>
+                                <span class="item_top_mini">另外還有自習室可以自主學習和複習，</span>
+                                <span class="item_top_mini">讓您享受寧靜的學習環境。</span>
+                            </div>
                         </div>
-                        <div class="col-2 col-md-2 col-lg-2 col-xl-2 class_img">
+                        <div class="col col-5 col-md-2  flex center_flex card_img">
                             <img src="pic/class_2.png">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col introd_item">
-                <div class="introd_title">
+
+            <div class="col item_top flex center_flex">
+                <div class="title flex center_flex">
                     明星教師陣容
                 </div>
-                <div class="col teacher_card_card">
-                    <div class="row teacher_card_flex">
-                        <div class="col col-md-5 col-lg-5 col-xl-5 teacher_text">
-                            <div class="teacher_text_title">
-                                <h3>張小明</h3>
-                                <span>台灣大學日文系博士</span>
-                            </div>
-                            <div class="teacher_text_script">
-                                <span>在過去的幾十年中，我一直在台灣教授日語和日本文學。</span>
-                                <span>我曾在多所大學任教，包括我的母校國立台灣大學，</span>
-                                <span>也曾擔任台日文化交流的翻譯工作。</span>
-                                <span>而在這裡交到的朋友也讓學習更有趣。</span>
-                                <span>這些經驗讓我能夠深入了解台灣學生的學習需求。</span>
-                                <span>非常期待與大家大家共同探索日語和日本文化。</span>
-                            </div>
-                        </div>
-                        <div class="col col-md-2 col-lg-2 col-xl-2 teacher_card_img">
+                <div class="col col-10 col-md-12 item_card item_top">
+                    <div class="row item_top item_card_flex">
+                        <div class="col col-5 col-md-2  flex center_flex card_img">
                             <img src="pic/teacher_1.png">
+                        </div>
+                        <div class="col col-10 col-md-5">
+                            <div class="flex teacher_text_title">
+                                <h3 class="title">張小明</h3>
+                                <span class="script_font">台灣大學日文系博士</span>
+                            </div>
+                            <div class="flex column_flex script_font item_top_mini">
+                                <span class="item_top_mini">在過去的幾十年中，我一直在台灣教授日語。</span>
+                                <span class="item_top_mini">我曾在多所大學任教，包括母校國立台灣大學，</span>
+                                <span class="item_top_mini">也曾擔任台日文化交流的翻譯工作。</span>
+                                <span class="item_top_mini">而在這裡交到的朋友也讓學習更有趣。</span>
+                                <span class="item_top_mini">這些經驗讓我能夠了解台灣學生的學習需求。</span>
+                                <span class="item_top_mini">非常期待與大家大家共同探索日語和日本文化。</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col teacher_card_card">
-                    <div class="row teacher_card_flex">
-                        <div class="col col-md-5 col-lg-5 col-xl-5 teacher_text">
-                            <div class="teacher_text_title">
-                                <h3>張小明</h3>
-                                <span>台灣大學日文系博士</span>
+                <div class="col col-10 col-md-12 item_card item_top_mini">
+                    <div class="row item_top item_card_flex">
+                        <div class="col col-10 col-md-5">
+                            <div class="flex teacher_text_title">
+                                <h3 class="title">張小明</h3>
+                                <span class="script_font">台灣大學日文系博士</span>
                             </div>
-                            <div class="teacher_text_script">
-                                <span>在過去的幾十年中，我一直在台灣教授日語和日本文學。</span>
-                                <span>我曾在多所大學任教，包括我的母校國立台灣大學，</span>
-                                <span>也曾擔任台日文化交流的翻譯工作。</span>
-                                <span>而在這裡交到的朋友也讓學習更有趣。</span>
-                                <span>這些經驗讓我能夠深入了解台灣學生的學習需求。</span>
-                                <span>非常期待與大家大家共同探索日語和日本文化。</span>
+                            <div class="flex column_flex script_font item_top_mini">
+                                <span class="item_top_mini">在過去的幾十年中，我一直在台灣教授日語。</span>
+                                <span class="item_top_mini">我曾在多所大學任教，包括母校國立台灣大學，</span>
+                                <span class="item_top_mini">也曾擔任台日文化交流的翻譯工作。</span>
+                                <span class="item_top_mini">而在這裡交到的朋友也讓學習更有趣。</span>
+                                <span class="item_top_mini">這些經驗讓我能夠了解台灣學生的學習需求。</span>
+                                <span class="item_top_mini">非常期待與大家大家共同探索日語和日本文化。</span>
                             </div>
                         </div>
-                        <div class="col col-md-2 col-lg-2 col-xl-2 teacher_card_img">
+                        <div class="col col-5 col-md-2 flex center_flex card_img">
                             <img src="pic/teacher_2.png">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col introd_item">
-                <div class="introd_title">
+            <div class="col item_top flex center_flex">
+                <div class="title flex center_flex">
                     夏日合宿帶妳暢遊長野縣
                 </div>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2">
-                    <div class="col travel_introd_img">
+                <div class="row item_top center_flex">
+                    <div class="col col-10 col-md-6 card_event_img">
                         <img src="pic/event_1.png">
                     </div>
-                    <div class="col travel_introd_img">
+                    <div class="col col-10 col-md-6 card_event_img">
                         <img src="pic/event_2.png">
                     </div>
                 </div>
-                <div class="travel_introd_text">
-                    <header>春季日文補習班於20xx年與長野高校達成合作舉辦留學班！為學生提供更深入的日本文化體驗和語言學習機會。</header>
-                    <span>課程亮點：</span>
+                <div class="col col-10 col-md-12 script_font flex column_flex item_top event_bottom">
+                    <header class="item_top">春季日文補習班於20xx年與長野高校達成合作舉辦留學班！為學生提供更深入的日本文化體驗和語言學習機會。</header>
+                    <span class="item_top">課程亮點：</span>
                     <ul>
-                        <li>文化探索：能夠親身體驗日本的文化和傳統。包含參觀美術館、茶道表演等各種文化活動。</li>
-                        <li>語言學習：除了文化探索，還有合當地教師一起進行日語互動，有效有效提升聽說能力。</li>
-                        <li>住宿與用餐：我們將在當地合宿，體驗日本生活。這將有助於更深入地了解日本文化。</li>
+                        <li class="item_top_mini">文化探索：能夠親身體驗日本的文化和傳統。包含參觀美術館、茶道表演等各種文化活動。</li>
+                        <li class="item_top_mini">語言學習：除了文化探索，還有合當地教師一起進行日語互動，有效有效提升聽說能力。</li>
+                        <li class="item_top_mini">住宿與用餐：我們將在當地合宿，體驗日本生活。這將有助於更深入地了解日本文化。</li>
                     </ul>
-                    <span>這個合宿活動旨在培養學生的文化敏感度，提高他們的日語技能，同時為他們創造一次獨特的旅行機會。</span>
-                    <footer>我們期待與您您一起探索日本的美麗和豐富多彩的文化。</footer>
+                    <span class="item_top_mini">這個合宿活動旨在培養學生的文化敏感度，提高他們的日語技能，同時為他們創造一次獨特的旅行機會。</span>
+                    <footer class="item_top">我們期待與您您一起探索日本的美麗和豐富多彩的文化。</footer>
                 </div>
             </div>
         </div>
     </div>
-    <!-- 頁尾 -->
+
+    <!-- 頁尾 1.0-->
     <footer class="page_footer">
         <div class="container">
             <div class="row footer_link_flex">
                 <a href="#" class="col col-4 col-lg-3 col-xl-2 footer_item">
                     <img src="pic/corp_school_logo.png">
-                    <h3 class="flex center_flex">長野縣高等學校</h3>
+                    <h3 class="flex center_flex script_font_jp">長野縣高等學校</h3>
                 </a>
                 <a href="index.html" class="col col-4 col-lg-3 col-xl-2 footer_item">
                     <img src="pic/sakura_logo.png">
-                    <h3 class="flex center_flex">春天日語補習班</h3>
+                    <h3 class="flex center_flex script_font_jp">春天日語補習班</h3>
                 </a>
                 <a href="https://www.jlpt.jp/index.html" class="col col-4 col-lg-3 col-xl-2 footer_item">
                     <img src="pic/jlpt_logo.png">
-                    <h3 class="flex center_flex title">JLPT日文檢定</h3>
+                    <h3 class="flex center_flex script_font_jp">JLPT日文檢定</h3>
                 </a>
             </div>
         </div>

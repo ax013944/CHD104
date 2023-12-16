@@ -1,166 +1,92 @@
-.introd_title {
-    line-height: 1.5;
-    font-size: 32px;
-    letter-spacing: 0.2ex;
-    font-family: 'Noto Serif JP', serif;
-    margin-bottom: 50px;
-    text-align: center;
+.item_top {
+    margin-top: 20px;
+
+    @media (min-width: 768px) {
+        margin-top: 40px;
+    }
 }
 
-.introd_item {
-    margin-top: 40px;
+.item_top_mini {
+    margin-top: 8px;
+
+    @media (min-width: 768px) {
+        margin-top: 10px;
+    }
 }
 
-.classroom_card {
-    position: relative;
-    justify-content: space-evenly;
+.card_img img {
+    width: 100%;
+    vertical-align: middle;
+    padding: 20px;
+
+    @media (min-width: 768px) {
+        padding: 0;
+    }
 }
 
-.classroom_card_flex {
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 375.25px;
-}
-
-.classroom_card_flex+.classroom_card_flex {
-    margin-top: 10px;
-}
-
-.class_card_bg {
-    position: absolute;
-    z-index: -1;
-}
-
-.class_card_bg,
-.class_img img {
+.card_event_img img {
     width: 100%;
     vertical-align: middle;
 }
 
-.class_img {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.card_event_img+.card_event_img {
+    margin-top: 10px;
+
+    @media (min-width: 768px) {
+        margin: 0;
+    }
 }
 
-.class_text {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    line-height: 1.5;
-    letter-spacing: 0.2ex;
-    color: white;
-}
-
-.teacher_text_title h3,
-.class_title {
-    font-size: 32px;
-    font-family: 'Noto Serif JP', serif;
-}
-
-.class_title {
-    margin-bottom: 20px;
-}
-
-.teacher_text_script span,
-.class_text span {
-    font-size: 18px;
-    font-family: 'Inter', sans-serif;
-}
-
-.teacher_text_script span+span,
-.class_text span+span {
-    padding-top: 10px;
-}
-
-.teacher_card_card {
+.item_card {
     box-sizing: border-box;
     border-radius: 20px;
     color: #fff;
 }
 
-.teacher_card_card:nth-child(2) {
+.item_card:nth-child(2) {
     background-color: #97BFAB;
     border: 1px solid #B9DFCD;
 }
 
-.teacher_card_card:nth-child(3) {
+.item_card:nth-child(3) {
     background-color: #10253F;
     border: 1px solid #32475F;
 }
 
+.item_card:nth-child(3)>.item_card_flex {
+    flex-direction: column-reverse;
+    align-items: center;
 
-.teacher_card_card+.teacher_card_card {
-    margin-top: 10px;
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
 }
 
-.teacher_card_flex {
+.item_card_flex {
     justify-content: space-evenly;
-    margin: 50px 0;
-}
+    margin-bottom: 30px;
 
-.teacher_text {
-    line-height: 1.5;
-    letter-spacing: 0.2ex;
+    @media (min-width: 768px) {
+        margin-top: 40px;
+    }
 }
 
 .teacher_text_title {
-    display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 .teacher_text_title h3+span {
-    margin-left: 35px;
+    margin-left: 15px;
+
+    @media (min-width: 768px) {
+        margin-left: 35px;
+    }
 }
 
-.teacher_text_script {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
+.event_bottom {
+    margin-bottom: 15px;
 
-.teacher_card_img {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.teacher_card_img img {
-    width: 100%;
-    vertical-align: middle;
-}
-
-.travel_introd_img img {
-    width: 100%;
-    vertical-align: middle;
-}
-
-.travel_introd_text {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 40px 0;
-    line-height: 1.5;
-    letter-spacing: 0.2ex;
-    font-size: 18px;
-    font-family: 'Inter', sans-serif;
-}
-
-.travel_introd_text header {
-    margin-bottom: 60px;
-}
-
-.travel_introd_text li {
-    margin-top: 10px;
-}
-
-.travel_introd_text footer {
-    margin-top: 60px;
+    @media (min-width: 768px) {
+        margin-bottom: 35px;
+    }
 }

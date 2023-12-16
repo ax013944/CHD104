@@ -203,14 +203,57 @@
 }
 
 /* 燈箱樣式 */
-.lightbox {
+.row .lightbox {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
+    border: 1px solid #000;
     background: #fff;
     z-index: 100;
+    padding: 0;
     /* 比遮罩高的層級 */
+}
+
+.lightbox>div {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 10px;
+
+    @media (min-width: 768px) {
+        height: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+.lightbox>span {
+    padding: 0 10px 5px 10px;
+    @media (min-width: 768px) {
+        padding: 0 20px 5px 20px;
+    }
+}
+.lightbox a {
+    margin: 10px 0 20px;
+    color: #fff;
+    background-color: #FF829F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 768px) {
+        margin: 20px 0 30px;
+    }
+}
+
+.lightbox a:hover {
+    background-color: #10253F;
+    transition: 1s;
+}
+
+#file_name{
+    align-items: center;
+    margin-left: 10px;
+    @media (min-width: 768px) {
+        margin-left: 20px;
+    }
 }
