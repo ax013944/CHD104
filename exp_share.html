@@ -70,71 +70,27 @@
     <!-- main -->
     <div class="exp_page">
         <div class="container">
-            <div class="row center_flex">
+            <div class="row center_flex" id="app">
 
                 <div class="col  col-12 title flex center_flex script_block">經驗分享</div>
 
-                <div class="col col-10 col-md-12 col-lg-12 col-xl-12 exp_card">
+                <div v-for="item in exp_card" :key="item.id"  class="col col-10 col-md-12 col-lg-12 col-xl-12 exp_card">
                     <div class="row center_flex">
                         <div class="col col-md-2 col-lg-2 col-xl-2 flex center_flex exp_card_img">
-                            <img src="pic/upperclassman_1.png">
+                            <img :src="item.imgSrc">
                         </div>
                         <div class="col col-md-5 col-lg-5 col-xl-5 white_font exp_card_text">
                             <div class="flex exp_card_title_flex script_block">
-                                <h3 class="title">張小明</h3>
-                                <span class="script_font flex">JLPT N1 全科滿分</span>
+                                <h3 class="title">{{item.name}}</h3>
+                                <span class="script_font flex">{{item.certification}}</span>
                             </div>
                             <div class="flex column_flex exp_script">
-                                <span class="script_font flex">在春天日文補習班學習日語是一段難忘的經歷。</span>
-                                <span class="script_font flex">老師們非常專業，幫助我掌握了日語基本技能。</span>
-                                <span class="script_font flex">文化活動讓我更深入了解了日本文化，</span>
-                                <span class="script_font flex">而在這裡交到的朋友也讓學習更有趣。</span>
-                                <span class="script_font flex">這個經歷不僅提高了我的語言能力，</span>
-                                <span class="script_font flex">也為我帶來了寶貴的回憶。</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-10 col-md-12 col-lg-12 col-xl-12 exp_card">
-                    <div class="row center_flex">
-                        <div class="col col-md-2 col-lg-2 col-xl-2 flex center_flex exp_card_img">
-                            <img src="pic/upperclassman_2.png">
-                        </div>
-                        <div class="col col-md-5 col-lg-5 col-xl-5 white_font exp_card_text">
-                            <div class="flex exp_card_title_flex script_block">
-                                <h3 class="title">張小明</h3>
-                                <span class="script_font flex">JLPT N1 全科滿分</span>
-                            </div>
-                            <div class="flex column_flex exp_script">
-                                <span class="script_font flex">在春天日文補習班學習日語是一段難忘的經歷。</span>
-                                <span class="script_font flex">老師們非常專業，幫助我掌握了日語基本技能。</span>
-                                <span class="script_font flex">文化活動讓我更深入了解了日本文化，</span>
-                                <span class="script_font flex">而在這裡交到的朋友也讓學習更有趣。</span>
-                                <span class="script_font flex">這個經歷不僅提高了我的語言能力，</span>
-                                <span class="script_font flex">也為我帶來了寶貴的回憶。</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-10 col-md-12 col-lg-12 col-xl-12 exp_card">
-                    <div class="row center_flex">
-                        <div class="col col-md-2 col-lg-2 col-xl-2 flex center_flex exp_card_img">
-                            <img src="pic/upperclassman_3.png">
-                        </div>
-                        <div class="col col-md-5 col-lg-5 col-xl-5 white_font exp_card_text">
-                            <div class="flex exp_card_title_flex script_block">
-                                <h3 class="title">張小明</h3>
-                                <span class="script_font flex">JLPT N1 全科滿分</span>
-                            </div>
-                            <div class="flex column_flex exp_script">
-                                <span class="script_font flex">在春天日文補習班學習日語是一段難忘的經歷。</span>
-                                <span class="script_font flex">老師們非常專業，幫助我掌握了日語基本技能。</span>
-                                <span class="script_font flex">文化活動讓我更深入了解了日本文化，</span>
-                                <span class="script_font flex">而在這裡交到的朋友也讓學習更有趣。</span>
-                                <span class="script_font flex">這個經歷不僅提高了我的語言能力，</span>
-                                <span class="script_font flex">也為我帶來了寶貴的回憶。</span>
+                                <span class="script_font flex">{{item.experience_1}}</span>
+                                <span class="script_font flex">{{item.experience_2}}</span>
+                                <span class="script_font flex">{{item.experience_3}}</span>
+                                <span class="script_font flex">{{item.experience_4}}</span>
+                                <span class="script_font flex">{{item.experience_5}}</span>
+                                <span class="script_font flex">{{item.experience_6}}</span>
                             </div>
                         </div>
                     </div>
@@ -190,6 +146,51 @@
     </footer>
 
     <script src="js/static.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    exp_card: [
+                        {
+                            id: 1,
+                            imgSrc: "pic/upperclassman_1.png",
+                            name: "張小明",
+                            certification: "JLPT N1 全科滿分",
+                            experience_1: "在春天日文補習班學習日語是一段難忘的經歷。",
+                            experience_2: "老師們非常專業，幫助我掌握了日語基本技能。",
+                            experience_3: "文化活動讓我更深入了解了日本文化，",
+                            experience_4: "而在這裡交到的朋友也讓學習更有趣。",
+                            experience_5: "這個經歷不僅提高了我的語言能力，",
+                            experience_6: "也為我帶來了寶貴的回憶。"
+                        }, {
+                            id: 2,
+                            imgSrc: "pic/upperclassman_2.png",
+                            name: "張小明",
+                            certification: "JLPT N1 全科滿分",
+                            experience_1: "在春天日文補習班學習日語是一段難忘的經歷。",
+                            experience_2: "老師們非常專業，幫助我掌握了日語基本技能。",
+                            experience_3: "文化活動讓我更深入了解了日本文化，",
+                            experience_4: "而在這裡交到的朋友也讓學習更有趣。",
+                            experience_5: "這個經歷不僅提高了我的語言能力，",
+                            experience_6: "也為我帶來了寶貴的回憶。"
+                        }, {
+                            id: 3,
+                            imgSrc: "pic/upperclassman_3.png",
+                            name: "張小明",
+                            certification: "JLPT N1 全科滿分",
+                            experience_1: "在春天日文補習班學習日語是一段難忘的經歷。",
+                            experience_2: "老師們非常專業，幫助我掌握了日語基本技能。",
+                            experience_3: "文化活動讓我更深入了解了日本文化，",
+                            experience_4: "而在這裡交到的朋友也讓學習更有趣。",
+                            experience_5: "這個經歷不僅提高了我的語言能力，",
+                            experience_6: "也為我帶來了寶貴的回憶。"
+                        }
+                    ]
+            }
+        }
+        }).mount('#app')
+    </script>
 </body>
 
 </html>
